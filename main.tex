@@ -1,0 +1,105 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+\graphicspath{ {./images/} }
+\usepackage{multicol}
+\usepackage{array}
+
+% width,height
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+
+\title{OE - Assignment}
+\author{C Muhilan}
+\date{\today}
+
+\begin{document}
+
+    \input{titlepage}
+    
+    \begin{center}
+        \section*{IOT Continuous Glucose Sensor}
+    \end{center}
+\setlength{\columnsep}{1.0cm}
+    \large
+    \section*{Summary}
+   Health monitoring systems based on Internet-of-things (IoT) have been recently introduced to improve the quality of health care services. However, the number of advanced IoT-based continuous glucose monitoring systems is small and the existing systems have several limitations. In this paper we study feasibility of invasive and continuous glucose monitoring (CGM) system utilizing IoT based approach. We designed an IoT-based system architecture from a sensor device to a back-end system for presenting real-time glucose, body temperature and contextual data  in graphical and human-readable forms to end-users such as patients and doctors. efficiency. Finally, it also provides many advances services at a getaway level such as   a push notification service for notifying patient and doctors.
+
+
+    
+\begin{document}
+
+    
+    \section*{1.	Introduction}
+    \begin{enumerate}
+    \item Internet of Things (IoT) can be viewed as a dynamic network where physical and virtual objects are interconnected together. Advances in WSNs have created an innovative ground for e-health and wellness application development. These can be combined to other health solutions such as fitness and wellness, chronic disease management and diet or nutrition monitoring applications.
+     \item                                         Fully autonomous health monitoring wireless systems can have many useful applications. Among those applications is glucose level measurement for diabetics. Diabetes is a major health concern. According to a WHO report, the number of people with diabetes has exceeded 422 millions and in 2012, over 1.5 million people died because of diabetes. The WHO classified diabetes as a top ten causes of mortality. Diabetes has serious effects on the well-being of a person and the society. Unfortunately, there is still no known permanent cure for diabetes 3. However, one solution to this problem is to continuously measure blood glucose levels and close the loop with appropriate insulin delivery. Statistics published by the UK Prospective Diabetes Group demonstrate that CGM can reduce the long term complications between 40 % and 75 .
+     \item In this paper, the presented work aims to study the feasibility of invasive and secure CGMS using IoT. The work is to design an IoT-based system architecture from a sensor device to a back-end system for presenting real-time glucose, body temperature and contextual data (i.e. environmental temperature) in graphical and text forms to end-users such as patient and doctor.
+
+
+    
+    \end{enumerate}
+
+    \section*{2.	System architecture}
+
+
+    \includegraphics{images/1.png}\\
+  
+    
+     In the furtherance of providing continuous glucose monitoring in real-time locally and remotely, the CGMS architecture shown in Fig .1 is based on an IoT architecture. The system includes three main components such as a portable sensor device, a gateway and a back-end system.
+
+
+    \section*{3.1. Sensor device structure}
+    \includegraphics{images/img2.2.png}\\
+   
+   The sensor device whose structure is shown in the figure consists of primary component blocks such as sensors, a microcontroller, a wireless communication block, energy harvesting and management components. The micro-controller performs primary tasks of the device such as data acquisition and transmission. Therefore, it consumes a large part of the device’s total power consumption. Reducing power consumption micro-controller can save a lot of power consumption of the device.
+   The NRF wireless communication block is responsible for transmitting data from the micro-controller to the gateway equipped with an NRF transceiver. The block includes a RF transceiver IC for the 2.4GHz ISM band and an embedded antenna. In the sensor node, the energy harvesting unit and the power management unit described in the followings are two of the most important components because they directly impact on energy consumption and an operating duration of the sensor node.
+
+    \section*{3.1.1. Energy Harvesting Unit}
+    
+
+   Unfortunately, the development shown in the field of IOT is not reflected at the battery capacity side. A major limitation of untethered nodes is a limited battery capacity which limits the operation time of the nodes. The finite lifetime of a node implies the nite lifetime of the applications or additional costs and complexity to regularly energy harvesting system change batteries. Nodes could possibly use large batteries for longer lifetimes, but will have to deal with increased size, weight and cost. Nodes may also opt to use low-power hardware like a low-power processor and radio, at the cost of lesser computation ability and lower transmission ranges.
+   Energy harvesting could be a solution to the above mentioned dilemma. Energy harvesting refers to harnessing energy from the environment or other energy sources (body heat, foot strike) and converting it to electrical energy. If the harvested energy source is large and periodically/continuously available, a sensor node can be powered perpetually. Energy sources can be broadly classified into the following two categories,
+   
+   (i)	Ambient Energy Sources: Sources of energy from the surrounding environment, 
+          e.g., solar energy, wind energy and RF energy
+  
+  (ii)Human Power: Energy harvested from body movements of humans. Passive human 
+          power sources are those which are not user controllable.
+
+    \section*{3.2. Glucose sensor}
+
+    
+    \begin{itemize}
+        
+        \item \textbf Generally, glucose measurements are based on interactions with one of three enzymes: hexokinase, glucose oxidase  or glucose-1-dehydrogenase . The basic concept of the glucose biosensor is based on the fact that the immobilized GOX catalyses the oxidation of β-D-glucose by molecular oxygen producing gluconic acid and hydrogen peroxide . In order to work as a catalyst, GOX requires a redox cofactor—flavin adenine dinucleotide
+    \end{itemize}
+
+    \section*{3.2.3. Non-invasive Glucose Monitoring System}
+
+      Non-invasive glucose analysis is another goal of glucose sensor technology and significant efforts have been made to achieve this goal. Optical or transdermal approaches are the most common non invasive glucose sensing methods .The optical glucose sensors use the physical properties of light in the interstitial fluid or the anterior chamber of the eye. These approaches include polarimetry , Raman spectroscopy , infrared absorption spectroscopy , photo acoustics , and optical coherence tomography .
+
+   
+ \section*{3.3. Gateway and back-end structure} 
+    \includegraphics{images/img3.png}\\
+    Similar to conventional gateways in IoT systems, the proposed gateway collects data from wireless sensor devices and transmits the data to Cloud servers. The gateway performs its tasks by using a NRF transceiver and a wireless IP-based transceiver (i.e. Wifi, GPRS or 3G). . The NRF transceiver, which is a plug-able component, is compatible with all types of smart devices   . . The nRF transceiver, which is a plug-able component, is compatible with all types of smart devices
+    The collected data might consist of noise and corrupted data. In order to provide a high quality of data, the noise and corrupted data must be filtered. In the gateway, the data processing unit not only performs filtering tasks but also run algorithms to process data such as decision making and categorization of diabetes statuses.
+    
+     Local database in the gateway consists of an intact database and a real-time database. The intact database stores algorithms’ information and configuration data while the real-time database is used for storing e-health and contextual data. Therefore, the intact database is only used for internal usage and managed by system administrators while the real-time database is regularly updated and synchronized with Cloud’s database .In the gateway, decision making and push notification services work together to provide real-time notifications to doctors or caregivers
+
+       
+    
+
+\section*{4.Implementation} 
+   \includegraphics{images/IMG4.1.png}\\
+
+   Local database in gateways is implemented by MySQL database, and local storage (HD card).  The server is implemented by HTML5, Web-Socket and Node.js because they support real-time and streaming data. In addition, MySQL database for storing synchronized data and Javascipt for plotting graphical charts are utilized.
+   
+   An Android app is built in the gateway for receiving data from the nRF component and performing other services. When data is available at one-end of the USB port, the app automatically reads the data and performs the data processing service.
+
+   \section*{Conclusion}
+
+    In this paper, we presented a real-time remote IoT-based continuous glucose monitoring system. The implemented IoT-based architecture is complete system starting from sensor node to a back-end server. Through the system, doctors and caregivers can easily monitor their patient anytime, anywhere via a browser or a smart-phone application. Sensor nodes of the system are able to obtain several types of data  and transmit the data wirelessly to the gateway efficiently in term of energy consumption. In addition, the sensor node is integrated with the power management unit and the energy harvesting unit for extending operating duration of the sensor device.
+    
+\end{document}
+\end{document}
+
